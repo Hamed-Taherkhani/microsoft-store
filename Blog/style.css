@@ -1,0 +1,286 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    overflow-x: hidden;
+}
+
+button {
+    outline: none;
+}
+
+.each-part {
+    background-color: #fff;
+    margin: 0.7rem;
+    box-shadow: 0 1px 5px darkgray;
+    border-radius: 10px;
+    padding: 0 1rem 1.3rem;
+}
+
+.parts-text {
+    width: 70%;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 1.1rem 1.1rem 1.1rem 0;
+    border-bottom: 1px solid #cecece;
+    margin-bottom: 1.5rem;
+}
+
+* {
+    transition: 500ms;
+}
+
+/* Styling sidebar */
+aside {
+    width: 100px;
+    height: 100vh;
+    background-color: #f1f3f7;
+    font-size: 0.75rem;
+    color: #85878a;
+    font-weight: 500;
+    border-right: solid 1px #e6e6e6;
+    position: fixed;
+
+}
+
+aside nav {
+    margin-top: 1rem;
+}
+
+aside nav li {
+    margin: 0.3rem;
+    cursor: pointer;
+    padding: 0.6rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+aside nav li:hover {
+    background-color: #ebe9e9;
+}
+
+aside nav li div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+aside nav img {
+    width: 30px;
+}
+
+.nav-link-text {
+    margin-top: 0.4rem;
+}
+
+nav .border {
+    display: none;
+    position: absolute;
+    left: 2px;
+    top: 27%;
+    width: 5px;
+    height: 46%;
+    border-radius: 2.5px;
+    background-color: #1d6978;
+    animation: 400ms ease-in-out 0s 1;
+}
+
+.filled-icon {
+    display: none;
+}
+
+/* --End-- */
+
+main {
+    width: calc(100vw - 100px);
+    margin-left: 94px;
+
+}
+
+/* left-panel styles */
+#left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#app-icon {
+    width: 60%;
+    margin: 0 0 2rem;
+}
+
+#app-name {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#compony {
+    color: #258292;
+}
+
+#download-button {
+    background-color: #258292;
+    border: none;
+    color: #fff;
+    padding: 0.6rem 4rem;
+    margin: 3.5rem;
+    border-radius: 15px;
+}
+
+#left-panel ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#left-panel li {
+    border-right: 1px solid #cecece;
+    margin-right: 1rem;
+    width: 100px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#optional-logo img {
+    height: 60px;
+}
+
+#optional-logo {
+    margin-right: 0 !important;
+    border: none !important;
+}
+
+#left-panel ul .number {
+    font-size: 1.7rem;
+}
+
+#about {
+    max-width: 350px;
+}
+
+#share-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+#category {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: black;
+    padding: 0.5rem 30px;
+    border: 1px #cecece solid;
+    border-radius: 20px;
+}
+
+/* --End-- */
+
+/* --------------------styling right-panel-------------------- */
+/* screen-shots styles */
+#screen-shots section {
+    width: 100%;
+    overflow: auto;
+}
+
+#screen-shots ul {
+    width: calc(5 * 600px + 50px);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+}
+
+#screen-shots ul li {
+    width: 600px;
+    height: 330px;
+    border-radius: 15px;
+}
+
+#sc1 {
+    background: no-repeat center /cover url("https://bdmusic25.green/wp-content/uploads/2020/04/Extraction-2020-Hindi-Dual-Audio-1080p-NF-HDRip-ESubs-1.4GB-x264-MKV.png");
+}
+
+#sc2 {
+    background: no-repeat center /cover url("https://store-images.s-microsoft.com/image/apps.50859.9007199266246365.0afd6643-4f30-4019-944e-c866ff4f24ad.2d4d5be9-9b2c-4dbf-a81e-59857af0a23b?w=538&h=303&q=90&format=jpg");
+}
+
+#sc3 {
+    background: no-repeat center /cover url("https://static.filehorse.com/screenshots/video-software/netflix-desktop-screenshot-02.png");
+}
+
+#sc4 {
+    background: no-repeat center /cover url("https://cloud.addictivetips.com/wp-content/uploads/2017/11/Netflix-cannot-take-screenshot-in-Windows-10.jpg");
+}
+
+#sc5 {
+    background: no-repeat center /cover url("https://i.ytimg.com/vi/nCdVzQxfKPU/maxresdefault.jpg");
+}
+
+/* --End-- */
+/* --------------------End-------------------- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(202, 202, 202);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1d6978;
+    border-radius: 5px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #433f69;
+}
+
+@media (min-width:1024px) {
+    main {
+        display: flex;
+    }
+
+    #right-panel {
+        width: calc(100% - (387px));
+        margin-left: 387px;
+    }
+
+    #left-panel {
+        width: 370px;
+        position: fixed;
+        height: 96.5vh;
+    }
+
+}
+
+@keyframes nav-border-animation {
+    0% {
+        height: 15%;
+        top: -40%;
+    }
+
+    50% {
+        top: 27%;
+    }
+
+    100% {
+        height: 46%;
+    }
+}

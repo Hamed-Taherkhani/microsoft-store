@@ -1,0 +1,98 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+* {
+    transition: 500ms;
+}
+
+#container,
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    padding: 1rem;
+    margin-top: 5rem;
+    position: relative;
+}
+
+img {
+    width: 100px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+    color: #0f589a;
+}
+
+
+
+input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgb(170, 170, 170);
+}
+
+button {
+    padding: 0.5rem 2.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #0f589a;
+    color: #fff;
+    background-color: #0f589a;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 100ms ease-out 0s;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    bottom: 10px;
+    font-size: 0.9rem;
+    color: rgb(48, 48, 48);
+}
+
+a:hover {
+    color: #0f589a;
+}
+
+@media (min-width:768px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container {
+        margin-top: 0;
+        box-shadow: 0 1px 8px darkgray;
+        border-radius: 25px;
+        padding: 4rem 1rem;
+    }
+}
+
+
+@media (min-width:1440px) {
+    #container {
+        transform: scale(1.5);
+    }
+}
+
+@media (min-width:2560px) {
+    #container {
+        transform: scale(3);
+    }
+}

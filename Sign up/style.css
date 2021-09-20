@@ -1,0 +1,135 @@
+body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+* {
+    transition: 500ms;
+}
+
+#container {
+    padding: 1rem;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+    color: #0f589a;
+}
+
+h2 {
+    text-align: left;
+    font-size: 1.3rem;
+    margin: 0.3rem 0;
+}
+
+span {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    color: rgb(105, 105, 105);
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgb(170, 170, 170);
+}
+
+button {
+    padding: 0.5rem 2.5rem;
+    margin: 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #0f589a;
+    color: #fff;
+    background-color: #0f589a;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 100ms ease-out 0s;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    bottom: 10px;
+    font-size: 0.9rem;
+    color: rgb(48, 48, 48);
+}
+
+a:hover {
+    color: #0f589a;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+@media (min-width:768px) {
+    body {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #container {
+        margin: 2rem;
+        box-shadow: 0 1px 8px darkgray;
+        border-radius: 25px;
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (min-width:1024px) {
+    body {
+        height: 100vh;
+    }
+
+    section {
+        display: flex;
+    }
+
+    div#pass {
+        margin: 2rem 0;
+    }
+
+    section input {
+        width: 50%;
+        margin-right: 1rem;
+    }
+
+    #last-name,
+    #confirm-password {
+        margin-right: 0;
+    }
+}
+
+@media (min-width:1440px) {
+    #container {
+        transform: scale(1.5);
+    }
+}
+
+@media (min-width:2560px) {
+    #container {
+        transform: scale(3);
+    }
+}

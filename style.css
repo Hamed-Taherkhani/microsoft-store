@@ -1,0 +1,565 @@
+body {
+    height: auto;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+* {
+    transition: 500ms ease-in;
+}
+
+/* Styling sidebar */
+aside {
+    width: 100px;
+    background-color: #f1f3f7;
+    font-size: 0.75rem;
+    color: #85878a;
+    font-weight: 500;
+    border-right: solid 1px #e6e6e6;
+}
+
+aside nav {
+    position: fixed;
+    margin-top: 1rem;
+}
+
+aside nav li {
+    margin: 0.3rem;
+    cursor: pointer;
+    padding: 0.6rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+aside nav li:hover {
+    background-color: #ebe9e9;
+}
+
+aside nav li div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+aside nav img {
+    width: 30px;
+}
+
+.nav-link-text {
+    margin-top: 0.4rem;
+}
+
+nav .border {
+    display: none;
+    position: absolute;
+    left: 2px;
+    top: 27%;
+    width: 5px;
+    height: 46%;
+    border-radius: 2.5px;
+    background-color: #1d6978;
+    animation: 400ms ease-in-out 0s 1;
+}
+
+.filled-icon {
+    display: none;
+}
+
+/* --End-- */
+
+/* Styling slider-container */
+#container {
+    width: calc(100vw - 100px);
+    position: relative;
+}
+
+#nav-selected-item {
+    color: #fff;
+    position: absolute;
+    top: 1.51%;
+    left: 5%;
+    z-index: 1;
+    font-size: 1.7rem;
+}
+
+#slider-container {
+    height: 90vh;
+}
+
+#slider {
+    height: 89%;
+    background-color: #f1f3f7;
+}
+
+#slide-image {
+    background: center /cover url("https://www.bechtle.com/dam/jcr:af4c3286-9928-4448-a197-8a56025acb05/microsoft365-stage.jpg");
+    height: 100%;
+    position: relative;
+    border-top-left-radius: 15px;
+}
+
+#image-text {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    color: #f1f1f1;
+}
+
+#image-text h4 {
+    font-size: 3rem;
+}
+
+#image-text p {
+    margin: 0.5rem 0 1.1rem;
+}
+
+#image-text button {
+    padding: 0.6rem 1rem;
+    background-color: rgba(156, 156, 156, 0.596);
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.fade {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #000 -10%, #0000);
+    border-top-left-radius: 15px;
+
+}
+
+#slider-items {
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    bottom: 58px;
+    background: linear-gradient(0deg, #fff 60%, #0000 80%);
+}
+
+#slider-items ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: calc(1380px + 12rem);
+    margin-bottom: 0.5rem;
+}
+
+#slider-items li {
+    width: 230px;
+    height: 116px;
+    padding: 0.3rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #ffffff;
+    transition: 500ms;
+    border: 5px solid #fff0;
+    background-clip: padding-box;
+}
+
+#slider-items li h4 {
+    font-size: 0;
+    z-index: 1;
+    margin-right: 1rem;
+    transition: 200ms;
+    position: relative;
+    left: 0;
+}
+
+#slider-items li:hover {
+    background-size: 160%;
+    background-position-x: 30%;
+}
+
+#slider-items li:hover h4 {
+    font-size: 1rem;
+    left: 1rem;
+}
+
+#slider-items li:hover .slide-item-fade {
+    width: 100%;
+}
+
+.slide-item-fade {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #000 -10%, #0000);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 200ms;
+}
+
+#m365 {
+    background: center /cover url("https://www.bechtle.com/dam/jcr:af4c3286-9928-4448-a197-8a56025acb05/microsoft365-stage.jpg");
+    border: 5px solid #1d6978;
+}
+
+#entertainment {
+    background: center /cover url("https://static0.srcdn.com/wordpress/wp-content/uploads/2020/10/PS5-Entertainment-Apps-1.jpg");
+}
+
+#reddit {
+    background: center /cover url("https://adsider.com/wp-content/uploads/2021/01/reddit-profiles-cov-1280x720.png");
+
+}
+
+#own-it-today {
+    background: center /cover url("https://cdn.stayhappening.com/events5/banners/270f1e406436588a31fc72ba47678d1852d6006e4abb8160d78bcd01cf579467-rimg-w706-h280-gmir.jpg?v=1620414492");
+
+}
+
+#among-us {
+    background: center /cover url("https://www.queensjournal.ca/sites/default/files/img/story/2020/10/01/among_us.png");
+
+}
+
+#racing-game {
+    background: center /cover url("http://www.techquila.co.in/wp-content/uploads/2020/05/asphalt-8.jpg");
+
+}
+
+/* --End-- */
+
+
+/* Essential apps */
+.suggestions-panel {
+    width: 90%;
+    height: 65vh;
+    margin: 3rem 5% 1rem;
+    padding: 2rem 1rem;
+    background-color: #433f69;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    color: #f1f1f1;
+    box-sizing: border-box;
+}
+
+.suggestions-panel-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.suggestions-panel-text h4 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.suggestions-options {
+    height: 100%;
+    color: #000000;
+}
+
+.suggestions-options ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.suggestions-options li {
+    padding: 1rem 0.8rem;
+    width: 10vw;
+    height: 80%;
+    background-color: #f1f3f7ab;
+    border-radius: 15px;
+    margin: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: 200ms;
+}
+
+.suggestions-options li:hover {
+    background-color: #fff;
+}
+
+.suggestions-options h5 {
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.suggestions-options img {
+    width: 100%;
+}
+
+/* --End-- */
+
+/* Top free apps */
+#top-free-apps {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#top-free-apps .price {
+    position: absolute;
+    right: 5%;
+    top: 17px;
+}
+
+.apps-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.apps-category {
+    font-size: 0.8rem;
+}
+
+#top-free-apps ul {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#top-free-apps li {
+    display: flex;
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(169, 169, 169, 0.315);
+    margin-bottom: 1rem;
+    width: 20rem
+}
+
+#top-free-apps li img {
+    margin-right: 1rem;
+}
+
+/* --End-- */
+
+/* Trending */
+#trending {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#trending div {
+    overflow: auto;
+    margin: 1rem 0;
+}
+
+#trending ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: calc((8 * 160px) + 400px);
+    margin-bottom: 0.5rem;
+}
+
+#trending li {
+    width: 160px;
+    height: 230px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 1px 10px rgba(169, 169, 169, 0.486);
+    position: relative;
+    margin-top: 0.4rem;
+}
+
+#trending .price {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+/* --End-- */
+
+/* Collections */
+#collections {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#collections ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+#collections li {
+    width: 48%;
+    height: 20vw;
+    border-radius: 25px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#collections li:hover .image {
+    filter: blur(10px);
+}
+
+#collections li:hover span {
+    bottom: 30%;
+}
+
+#collections li:hover p {
+    font-size: 1rem;
+    bottom: 17%;
+}
+
+
+.fade-one {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0, #000 -10%, #fff0);
+    border-radius: 25px;
+}
+
+#collections section {
+    z-index: 1;
+    margin: 0 0 1rem 1rem;
+}
+
+#collections section span {
+    display: inline-block;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 10%;
+    transition: 300ms;
+}
+
+#collections section p {
+    font-size: 0;
+    transition: 200ms ease-in-out;
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+}
+
+#collections .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transition: 300ms;
+}
+
+#racing-game0 .image {
+    background: no-repeat center /cover url("https://www.sectionhmstore.com/wp-content/uploads/2019/09/offlinecars-asphalt8-5bf393bb46e0fb002650eb20.jpg");
+}
+
+#social-media .image {
+    background: no-repeat center /cover url("https://i.pinimg.com/originals/ca/c6/62/cac662718c04bacc58fa1937abc10e24.jpg");
+}
+
+/* --End-- */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(202, 202, 202);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1d6978;
+    border-radius: 5px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #433f69;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+    #top-free-apps li {
+        width: 40%;
+    }
+
+    #collections ul {
+        flex-direction: column;
+    }
+
+    #collections li {
+        width: 100%;
+        height: 45vw;
+        margin-bottom: 0.5rem;
+    }
+
+    .suggestions-options .option4 {
+        display: none;
+    }
+}
+
+@media (max-width:425px) {
+    #top-free-apps li {
+        width: 100%;
+    }
+
+    .suggestions-options ul {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    #container {
+        width: 100%;
+    }
+
+    .suggestions-panel {
+        height: 45vh;
+    }
+
+    #image-text h4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* --End-- */
+
+@keyframes nav-border-animation {
+    0% {
+        height: 15%;
+        top: -40%;
+    }
+
+    50% {
+        top: 27%;
+    }
+
+    100% {
+        height: 46%;
+    }
+}
