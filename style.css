@@ -20,6 +20,7 @@ aside {
     color: #85878a;
     font-weight: 500;
     border-right: solid 1px #e6e6e6;
+    z-index: 1000;
 }
 
 aside nav {
@@ -68,6 +69,91 @@ nav .border {
 
 .filled-icon {
     display: none;
+}
+
+#user-info {
+    cursor: pointer;
+    position: fixed;
+    bottom: 3rem;
+    left: 0.9rem;
+}
+
+#user-info img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+#drop-down {
+    width: 0;
+    height: 0;
+    transition: 800ms;
+    color: #fff;
+    transform: scale(0);
+}
+
+#drop-down img {
+    display: none;
+}
+
+#user-info input:checked~#drop-down {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    width: 20rem;
+    height: 15rem;
+    z-index: 1000;
+    top: -12rem;
+    left: 5rem;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.322);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transform: scale(1);
+}
+
+#user-info input:checked~#drop-down img {
+    display: inline-block;
+    width: 100px;
+}
+
+#user-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px rgba(255, 255, 255, 0.562) solid;
+}
+
+#user-data section {
+    margin-left: 1rem;
+}
+
+#user-data section span {
+    font-size: 1.5rem;
+}
+
+#username {
+    color: #949494;
+    font-size: 1rem !important;
+}
+
+#drop-down ul {
+    margin-top: 0.5rem;
+}
+
+#drop-down li {
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: 300ms ease-out;
+}
+
+#drop-down li:hover {
+    background-color: rgba(255, 255, 255, 0.623);
+    color: #000;
 }
 
 /* --End-- */
