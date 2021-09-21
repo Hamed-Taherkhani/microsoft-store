@@ -8,8 +8,14 @@ button {
     cursor: pointer;
 }
 
-* {
-    transition: 500ms ease-in;
+
+li,
+img,
+section,
+article,
+body,
+#slider-container div {
+    transition: 500ms ease;
 }
 
 /* Styling sidebar */
@@ -86,7 +92,11 @@ nav .border {
 #drop-down {
     width: 0;
     height: 0;
-    transition: 800ms;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition: width 500ms ease-out;
+    border-radius: 15px;
     color: #fff;
     transform: scale(0);
 }
@@ -97,14 +107,11 @@ nav .border {
 
 #user-info input:checked~#drop-down {
     position: absolute;
-    background-color: rgb(255, 255, 255);
     padding: 1rem;
     width: 20rem;
     height: 15rem;
-    z-index: 1000;
     top: -12rem;
     left: 5rem;
-    border-radius: 25px;
     background: rgba(0, 0, 0, 0.322);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(20px);
@@ -136,8 +143,12 @@ nav .border {
 }
 
 #username {
-    color: #949494;
+    color: #dbdbdb;
     font-size: 1rem !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 8rem;
 }
 
 #drop-down ul {
@@ -147,12 +158,20 @@ nav .border {
 #drop-down li {
     padding: 0.25rem 0.5rem;
     font-size: 1rem;
-    border-radius: 25px;
-    transition: 300ms ease-out;
+    border-radius: 20px;
+    transition: 200ms ease-out;
+}
+
+#drop-down li a {
+    text-decoration: none;
+    color: #fff;
 }
 
 #drop-down li:hover {
     background-color: rgba(255, 255, 255, 0.623);
+}
+
+#drop-down li:hover a {
     color: #000;
 }
 
@@ -555,7 +574,7 @@ nav .border {
 }
 
 #racing-game0 .image {
-    background: no-repeat center /cover url("https://www.sectionhmstore.com/wp-content/uploads/2019/09/offlinecars-asphalt8-5bf393bb46e0fb002650eb20.jpg");
+    background: no-repeat center /cover url("https://digistatement.com/wp-content/uploads/2020/12/maxresdefault-1-2.jpg");
 }
 
 #social-media .image {
