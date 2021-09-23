@@ -168,6 +168,7 @@ button:active {
     font-size: 1.5rem;
     top: 1px;
     cursor: context-menu;
+    transition: 150ms ease;
 }
 
 #pass-panel div:active span {

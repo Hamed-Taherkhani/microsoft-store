@@ -4,7 +4,8 @@ const form = document.querySelector("form"),
   cropBtn = document.getElementById("crop-btn"),
   closeBtn = document.getElementById("close"),
   inputPanel = document.querySelector("#input-panel"),
-  blur = document.querySelector("#blur");
+  blur = document.querySelector("#blur"),
+  base64Avatar = document.querySelector("#base64-avatar");
 
 fileInput.addEventListener("change", eventHandler);
 function eventHandler() {
@@ -32,7 +33,7 @@ function eventHandler() {
         imageTag.src = canvasData;
         imageTag.onload = (e) => {
           const canvas = document.createElement("canvas");
-          const MAX_WIDTH = 200;
+          const MAX_WIDTH = 150;
           const scaleSize = MAX_WIDTH / e.target.width;
           canvas.width = MAX_WIDTH;
           canvas.height = e.target.height * scaleSize;
@@ -46,8 +47,7 @@ function eventHandler() {
           resizedImage.src = srcEncoded;
           inputPanel.append(resizedImage);
 
-          let imageFile = dataURLtoFile(srcEncoded, "avatar.png");
-          fileInput.file = imageFile;
+          base64Avatar.value = srcEncoded;
           cropperPopup();
         };
       };
@@ -71,7 +71,7 @@ function eventHandler() {
 
 closeBtn.addEventListener("click", abortCropper);
 function abortCropper() {
-  fileInput.file = "";
+  base64Avatar.value = "";
   fileInput.value = "";
   if (inputPanel.childElementCount === 2)
     inputPanel.removeChild(inputPanel.children[1]);
