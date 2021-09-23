@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up| Microsoft store</title>
     <link rel="stylesheet" href="../css reset.css" />
+    <link rel="stylesheet" href="./Cropper/cropper.css" />
     <link rel="stylesheet" href="./style.css" />
     <!--ubuntu font cdn-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,6 +18,16 @@
     <!--end-->
   </head>
   <body>
+    <div id="blur"></div>
+    <!-- Copper container -->
+    <div class="container">
+      <h2>Crop a round image</h2>
+      <section></section>
+      <button type="button" id="crop-btn">Crop</button>
+      <span id="close"></span>
+    </div>
+
+    <!-- Form container -->
     <div id="container">
       <img
         src="https://winaero.com/blog/wp-content/uploads/2021/07/Microsoft_Store_icon.png"
@@ -66,21 +77,25 @@
             />
           </section>
           <span
-            >Use at least 8 characters with a mix of letters, numbers &
-            symbols</span
-          >
+            >Use at least 8 characters with a mix of lower, upper letters,
+            numbers, symbols
+          </span>
         </div>
-        <input
-          type="file"
-          name="avatar"
-          id="avatar"
-          accept=".png, .jpg, .jpeg"
-        />
+        <div id="input-panel">
+          <input
+            type="file"
+            name="avatar"
+            id="avatar"
+            accept=".png, .jpg, .jpeg"
+          />
+        </div>
+
         <button type="submit">Sign up</button>
       </form>
       <a href="../Sign in/sign in.html">I have an account.</a>
     </div>
   </body>
 
+  <script src="./Cropper/cropper.js"></script>
   <script src="script.js"></script>
 </html>
