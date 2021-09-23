@@ -146,6 +146,34 @@ button:active {
     box-shadow: #831818 2px 3px 5px;
 }
 
+#pass-panel {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#pass-panel div {
+    position: absolute;
+    width: 24px;
+    margin-right: 1rem;
+}
+
+#pass-panel span {
+    display: inline-block;
+    position: absolute;
+    width: auto;
+    transform: rotate(30deg) scale(0);
+    right: 0.34rem;
+    font-size: 1.5rem;
+    top: 1px;
+    cursor: context-menu;
+}
+
+#pass-panel div:active span {
+    transform: rotate(45deg) scale(1.2);
+}
+
 @media (min-width:650px) {
     .container {
         width: 70%;
@@ -189,12 +217,21 @@ button:active {
     }
 
     div#pass {
-        margin: 2rem 0;
+        margin: 1rem 0;
     }
 
     section input {
         width: 50%;
         margin-right: 1rem;
+    }
+
+    #pass-panel {
+        margin-right: 1rem;
+    }
+
+    #pass-panel input {
+        width: 100%;
+        margin-right: 0;
     }
 
     #last-name,

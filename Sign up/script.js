@@ -185,3 +185,19 @@ function checkConfirmation() {
   this.style.background = lightRed;
   if (pass === confirmationPass && isValid) this.style.background = lightGreen;
 }
+
+/* Show password filed value */
+const eyes = document.querySelector("#pass-panel div");
+eyes.addEventListener("mousedown", () => displayPassword(true));
+eyes.addEventListener("mouseup", () => displayPassword(false));
+function displayPassword(isDisplayed) {
+  if (isDisplayed) {
+    // Show password
+    password.type = "text";
+    confirmation.type = "text";
+  } else {
+    // Hide password
+    password.type = "password";
+    confirmation.type = "password";
+  }
+}
