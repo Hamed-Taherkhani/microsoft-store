@@ -245,7 +245,6 @@ button:active {
 .container {
     width: 50%;
 }
-}
 
 @media (min-width:1440px) {
     #container {
