@@ -230,6 +230,10 @@ button:active {
         margin-right: 1rem;
         width: 50%;
     }
+
+    .container {
+        width: 50%;
+    }
 }
 
 #pass-panel input {
@@ -240,10 +244,6 @@ button:active {
 #last-name,
 #confirm-password {
     margin-right: 0;
-}
-
-.container {
-    width: 50%;
 }
 
 @media (min-width:1440px) {
