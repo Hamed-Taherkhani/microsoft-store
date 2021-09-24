@@ -31,7 +31,7 @@ h1 {
 
 h2 {
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     margin: 0.3rem 0;
 }
 
@@ -228,21 +228,23 @@ button:active {
 
     #pass-panel {
         margin-right: 1rem;
-    }
-
-    #pass-panel input {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    #last-name,
-    #confirm-password {
-        margin-right: 0;
-    }
-
-    .container {
         width: 50%;
     }
+}
+
+#pass-panel input {
+    width: 100%;
+    margin-right: 0;
+}
+
+#last-name,
+#confirm-password {
+    margin-right: 0;
+}
+
+.container {
+    width: 50%;
+}
 }
 
 @media (min-width:1440px) {

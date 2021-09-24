@@ -189,8 +189,9 @@ function checkConfirmation() {
 /* Show password filed value */
 const eyes = document.querySelector("#pass-panel div");
 eyes.addEventListener("mousedown", () => displayPassword(true));
-eyes.addEventListener("mouseup", () => displayPassword(false));
+window.addEventListener("mouseup", () => displayPassword(false));
 function displayPassword(isDisplayed) {
+  event.preventDefault();
   if (isDisplayed) {
     // Show password
     password.type = "text";
